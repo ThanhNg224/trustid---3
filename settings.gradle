@@ -1,0 +1,26 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+
+        // This is the key part for AARs in module-level libs/
+        flatDir {
+            dirs 'app/libs', 'eidsdk/libs'
+        }
+    }
+}
+
+rootProject.name = "trustid"
+include ':app'
+include ':eidsdk'

@@ -1,0 +1,2012 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_warning"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:foreground="?android:selectableItemBackground"
+                app:cardBackgroundColor="@android:color/holo_green_light"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                app:cardElevation="3dp"
+                app:contentPadding="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_small">
+
+                    <ImageView
+                        android:id="@+id/iconWarning"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_eid"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/textWarningTitle"
+                        style="@style/Text.SubHead"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:layout_toRightOf="@+id/iconWarning"
+                        android:text="@string/document_valid_eid"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/textWarningMessage"
+                        style="@style/Text.Body3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textWarningTitle"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:layout_toRightOf="@+id/iconWarning"
+                        android:text="@string/document_chip_content_success"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Authentication Information Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_images"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:foreground="?android:selectableItemBackground"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                app:cardElevation="3dp"
+                app:contentPadding="4dp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="16dp"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_front_card"
+                        android:layout_width="360dp"
+                        android:layout_height="240dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Vehicle Owner Details"
+                        android:src="@drawable/ic_person" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_back_card"
+                        android:layout_width="360dp"
+                        android:layout_height="240dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="60dp"
+                        android:contentDescription="Vehicle Owner Details"
+                        android:src="@drawable/ic_person" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_face"
+                        android:layout_width="240dp"
+                        android:layout_height="240dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Vehicle Owner Details"
+                        android:src="@drawable/ic_person" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_authentication"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:foreground="?android:selectableItemBackground"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                app:cardElevation="3dp"
+                app:contentPadding="4dp">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:stretchColumns="1">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="1">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_small">
+
+                            <TextView
+                                android:id="@+id/label_authentication"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/margin_tiny"
+                                android:text="@string/label_authentication"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableRow
+                        android:id="@+id/row_bac"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_bac"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_authentication_bac" />
+
+                        <ImageView
+                            android:id="@+id/value_bac"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="@dimen/margin_tiny"
+                            android:src="@drawable/ic_close_circle_outline"
+                            app:tint="@android:color/holo_red_light" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pace"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_authentication_pace" />
+
+                        <ImageView
+                            android:id="@+id/value_pace"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="@dimen/margin_tiny"
+                            android:src="@drawable/ic_close_circle_outline"
+                            app:tint="@android:color/holo_red_light" />
+
+                    </TableRow>
+
+
+                    <TableRow
+                        android:id="@+id/row_passive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_passive"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_authentication_passive" />
+
+                        <ImageView
+                            android:id="@+id/value_passive"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="@dimen/margin_tiny"
+                            android:src="@drawable/ic_close_circle_outline"
+                            app:tint="@android:color/holo_red_light" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_active"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_active"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_authentication_active" />
+
+                        <ImageView
+                            android:id="@+id/value_active"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="@dimen/margin_tiny"
+                            android:src="@drawable/ic_close_circle_outline"
+                            app:tint="@android:color/holo_red_light" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_document_signing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_document_signing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_authentication_document_signing" />
+
+                        <ImageView
+                            android:id="@+id/value_document_signing"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="@dimen/margin_tiny"
+                            android:src="@drawable/ic_close_circle_outline"
+                            app:tint="@android:color/holo_red_light" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_country_signing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_country_signing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_authentication_country_signing" />
+
+                        <ImageView
+                            android:id="@+id/value_country_signing"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="@dimen/margin_tiny"
+                            android:src="@drawable/ic_close_circle_outline"
+                            app:tint="@android:color/holo_red_light" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_chip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_chip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_authentication_chip" />
+
+                        <ImageView
+                            android:id="@+id/value_chip"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="@dimen/margin_tiny"
+                            android:src="@drawable/ic_close_circle_outline"
+                            app:tint="@android:color/holo_red_light" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_eac"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_eac"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_authentication_eac" />
+
+                        <ImageView
+                            android:id="@+id/value_eac"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="@dimen/margin_tiny"
+                            android:src="@drawable/ic_close_circle_outline"
+                            app:tint="@android:color/holo_red_light" />
+
+                    </TableRow>
+                </TableLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- Person Details Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_person"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:foreground="?android:selectableItemBackground"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                app:cardElevation="3dp"
+                app:contentPadding="4dp">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_medium"
+                    android:stretchColumns="*">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:shrinkColumns="*">
+
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:stretchColumns="1">
+
+                                    <TableRow
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:id="@+id/label_person_basic"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:padding="@dimen/margin_tiny"
+                                            android:text="Thông tin cơ bản"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                                    </TableRow>
+                                </TableLayout>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/label_pd_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:layout_marginRight="@dimen/margin_medium"
+                                        android:gravity="end"
+                                        android:padding="@dimen/margin_tiny"
+                                        android:text="Họ tên" />
+
+                                    <TextView
+                                        android:id="@+id/value_name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/margin_tiny"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/label_pd_DOB"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:layout_marginRight="@dimen/margin_medium"
+                                        android:gravity="end"
+                                        android:padding="@dimen/margin_tiny"
+                                        android:text="Ngày sinh" />
+
+                                    <TextView
+                                        android:id="@+id/value_DOB"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/margin_tiny"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/label_pd_gender"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:layout_marginRight="@dimen/margin_medium"
+                                        android:gravity="end"
+                                        android:padding="@dimen/margin_tiny"
+                                        android:text="Giới tính" />
+
+                                    <TextView
+                                        android:id="@+id/value_gender"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/margin_tiny"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                                </TableRow>
+                            </TableLayout>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </TableRow>
+                </TableLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Passport Information Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_documents"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:foreground="?android:selectableItemBackground"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                app:cardElevation="3dp"
+                app:contentPadding="4dp">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:stretchColumns="1">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="1">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_small">
+
+                            <TextView
+                                android:id="@+id/label_person_details"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/margin_tiny"
+                                android:text="@string/label_eid"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableRow
+                        android:id="@+id/row_pd_eid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pd_eid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_document_number" />
+
+                        <TextView
+                            android:id="@+id/value_pd_eid"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pd_dateofexpiry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pd_dateofexpiry"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_document_expiry" />
+
+                        <TextView
+                            android:id="@+id/value_pd_dateofexpiry"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pd_placeofissue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pd_placeofissue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_document_issuing_state" />
+
+                        <TextView
+                            android:id="@+id/value_pd_placeofissue"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pd_nationality"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pd_nationality"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_document_nationality" />
+
+                        <TextView
+                            android:id="@+id/value_pd_nationality"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+                </TableLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- National private information Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_national_private_information"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:foreground="?android:selectableItemBackground"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                app:cardElevation="3dp"
+                app:contentPadding="4dp">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:stretchColumns="1">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="1">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_small">
+
+                            <TextView
+                                android:id="@+id/label_pod_info"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/margin_tiny"
+                                android:text="@string/personal_info"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableRow
+                        android:id="@+id/row_pod_eid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pod_eid"
+                            android:layout_width="16dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/citizen_id" />
+
+                        <TextView
+                            android:id="@+id/value_pod_eid"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pod_fullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pod_fullname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/full_name" />
+
+                        <TextView
+                            android:id="@+id/value_pod_fullname"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pod_dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pod_dob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/dob" />
+
+                        <TextView
+                            android:id="@+id/value_pod_dob"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pod_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pod_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/gender" />
+
+                        <TextView
+                            android:id="@+id/value_pod_gender"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pod_nationality"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pod_nationality"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/nationality" />
+
+                        <TextView
+                            android:id="@+id/value_pod_nationality"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pod_ethinicity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pod_ethinicity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/ethnicity" />
+
+                        <TextView
+                            android:id="@+id/value_pod_ethinicity"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pod_religion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pod_religion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/religion" />
+
+                        <TextView
+                            android:id="@+id/value_pod_religion"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pod_placeoforigin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pod_placeoforigin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/place_of_origin" />
+
+                        <TextView
+                            android:id="@+id/value_pod_placeoforigin"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pod_placeofresidence"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pod_placeofresidence"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/place_of_residence" />
+
+                        <TextView
+                            android:id="@+id/value_pod_placeofresidence"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pod_personalidentification"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pod_personalidentification"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/personal_identification" />
+
+                        <TextView
+                            android:id="@+id/value_pod_personalidentification"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pod_dateofissue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pod_dateofissue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/issue_date" />
+
+                        <TextView
+                            android:id="@+id/value_pod_dateofissue"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pod_dateofexpiry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pod_dateofexpiry"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/expiry_date" />
+
+                        <TextView
+                            android:id="@+id/value_pod_dateofexpiry"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pod_fathername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pod_fathername"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/father_name" />
+
+                        <TextView
+                            android:id="@+id/value_pod_fathername"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pod_mothername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pod_mothername"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/mother_name" />
+
+                        <TextView
+                            android:id="@+id/value_pod_mothername"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pod_wife_husband_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pod_wife_husband_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/wife_husband_name" />
+
+                        <TextView
+                            android:id="@+id/value_pod_wife_husband_name"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pod_oldeidnumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pod_oldeidnumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/old_id_card" />
+
+                        <TextView
+                            android:id="@+id/value_pod_oldeidnumber"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pod_unkidnumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pod_unkidnumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/unk_id_number" />
+
+                        <TextView
+                            android:id="@+id/value_pod_unkidnumber"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+                </TableLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Additional person Information Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_additional_person_information"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:foreground="?android:selectableItemBackground"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                app:cardElevation="3dp"
+                app:contentPadding="4dp">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:stretchColumns="1">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="1">
+
+                        <TableRow
+                            android:id="@+id/row_pad"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_small">
+
+                            <TextView
+                                android:id="@+id/label_pad"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/margin_tiny"
+                                android:text="@string/label_additional_information"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableRow
+                        android:id="@+id/row_pad_custody"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pad_custody"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_additional_information_custody" />
+
+                        <TextView
+                            android:id="@+id/value_pad_custody"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pad_dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pad_dob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_additional_information_dob" />
+
+                        <TextView
+                            android:id="@+id/value_pad_dob"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pad_othernames"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pad_othernames"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_additional_information_other_names" />
+
+                        <TextView
+                            android:id="@+id/value_pad_othernames"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pad_othertdnumbers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pad_othertdnumbers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_additional_information_other_valid_td_numbers" />
+
+                        <TextView
+                            android:id="@+id/value_pad_othertdnumbers"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pad_permanentaddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pad_permanentaddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_additional_information_permanent_address" />
+
+                        <TextView
+                            android:id="@+id/value_pad_permanentaddress"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pad_eid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pad_eid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_additional_information_personal_number" />
+
+                        <TextView
+                            android:id="@+id/value_pad_eid"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pad_personalsummary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pad_personalsummary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_additional_information_personal_summary" />
+
+                        <TextView
+                            android:id="@+id/value_pad_personalsummary"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pad_placeofbirth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pad_placeofbirth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_additional_information_place_of_birth" />
+
+                        <TextView
+                            android:id="@+id/value_pad_placeofbirth"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pad_profession"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pad_profession"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_additional_information_profession" />
+
+                        <TextView
+                            android:id="@+id/value_pad_profession"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pad_telephone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pad_telephone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_additional_information_telephone" />
+
+                        <TextView
+                            android:id="@+id/value_pad_telephone"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_pad_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_pad_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_additional_information_title" />
+
+                        <TextView
+                            android:id="@+id/value_pad_title"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+                </TableLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- Additional person Information Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_additional_document_information"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:foreground="?android:selectableItemBackground"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                app:cardElevation="3dp"
+                app:contentPadding="4dp">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:stretchColumns="1">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="1">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_small">
+
+                            <TextView
+                                android:id="@+id/label_additional_document_information"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/margin_tiny"
+                                android:text="@string/label_additional_document_information"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableRow
+                        android:id="@+id/row_endorsements"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_endorsements"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_additional_document_information_endorsements_and_observations" />
+
+                        <TextView
+                            android:id="@+id/value_endorsements"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_date_personalization"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_date_personalization"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_additional_document_information_date_and_time_of_personalization" />
+
+                        <TextView
+                            android:id="@+id/value_date_personalization"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_date_issue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_date_issue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_additional_document_information_date_of_issue" />
+
+                        <TextView
+                            android:id="@+id/value_date_issue"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_issuing_authority"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_issuing_authority"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_additional_document_information_issuing_authority" />
+
+                        <TextView
+                            android:id="@+id/value_issuing_authority"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_names_other_persons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_names_other_persons"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_additional_document_information_names_of_other_persons" />
+
+                        <TextView
+                            android:id="@+id/value_names_other_persons"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_system_serial_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_system_serial_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_additional_document_information_personalization_system_serial_number" />
+
+                        <TextView
+                            android:id="@+id/value_system_serial_number"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_tax_exit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_tax_exit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_additional_document_information_tax_or_exit_requirements" />
+
+                        <TextView
+                            android:id="@+id/value_tax_exit"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                </TableLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- Additional person Information Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_document_signing_certificate"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:foreground="?android:selectableItemBackground"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                app:cardElevation="3dp"
+                app:contentPadding="4dp">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:stretchColumns="1">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="1">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_small">
+
+                            <TextView
+                                android:id="@+id/label_document_signing_certificate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/margin_tiny"
+                                android:text="@string/label_document_signing_certificate"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableRow
+                        android:id="@+id/row_document_signing_certificate_serial_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_document_signing_certificate_serial_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_certificate_serial_number" />
+
+                        <TextView
+                            android:id="@+id/value_document_signing_certificate_serial_number"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:maxLines="3"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+
+                    <TableRow
+                        android:id="@+id/row_document_signing_certificate_public_key_algorithm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_document_signing_certificate_public_key_algorithm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_certificate_public_key_algorithm" />
+
+                        <TextView
+                            android:id="@+id/value_document_signing_certificate_public_key_algorithm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_document_signing_certificate_signature_algorithm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_document_signing_certificate_signature_algorithm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_certificate_signature_algorithm" />
+
+                        <TextView
+                            android:id="@+id/value_document_signing_certificate_signature_algorithm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+
+                    <TableRow
+                        android:id="@+id/row_document_signing_certificate_thumbprint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_document_signing_certificate_thumbprint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_certificate_thumbprint" />
+
+                        <TextView
+                            android:id="@+id/value_document_signing_certificate_thumbprint"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:maxLines="4"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+
+                    <TableRow
+                        android:id="@+id/row_document_certificate_issuer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_document_signing_certificate_issuer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_certificate_issuer" />
+
+                        <TextView
+                            android:id="@+id/value_document_signing_certificate_issuer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:maxLines="6"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_document_certificate_subject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_document_signing_certificate_subject"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_certificate_subject" />
+
+                        <TextView
+                            android:id="@+id/value_document_signing_certificate_subject"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:maxLines="6"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_document_certificate_valid_from"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_document_signing_certificate_valid_from"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_certificate_valid_from" />
+
+                        <TextView
+                            android:id="@+id/value_document_signing_certificate_valid_from"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row_document_certificate_valid_to"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/label_document_signing_certificate_valid_to"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:gravity="end"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_certificate_valid_to" />
+
+                        <TextView
+                            android:id="@+id/value_document_signing_certificate_valid_to"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:padding="@dimen/margin_tiny"
+                            android:text="@string/label_not_available"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                </TableLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </FrameLayout>
+</ScrollView>
